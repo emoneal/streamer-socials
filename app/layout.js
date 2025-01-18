@@ -12,8 +12,8 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Path to the local image (in the public folder)
-const ogimage = '/ogpixelcafe.png';  // Correct usage of relative URL
+// Full URL for the Open Graph image
+const ogimage = 'https://socials.pixelemii.com/ogpixelcafe.png';
 
 export const metadata = {
   title: "PixelEmii - Socials",
@@ -26,7 +26,7 @@ export const metadata = {
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
-    image: ogimage,  // Use local image URL
+    image: ogimage,  // Use absolute URL for the image
     site_name: "PixelEmii",
     type: "website",
   },
@@ -34,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
-    image: ogimage,  // Use local image URL
+    image: ogimage,  // Use absolute URL for the image
   }
 };
 
