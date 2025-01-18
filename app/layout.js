@@ -46,14 +46,14 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta property="og:title" content={metadata.openGraph.title} />
         <meta property="og:description" content={metadata.openGraph.description} />
-        <meta property="og:image" content={metadata.openGraph.image} />
+        <meta property="og:image" content="https://socials.pixelemii.com/ogpixelcafe.png" />
         <meta property="og:url" content={metadata.openGraph.url} />
-        <meta property="og:site_name" content={metadata.openGraph.site_name} />
+        <meta property="og:site_name" content="PixelEmii" />
         <meta property="og:type" content={metadata.openGraph.type} />
         <meta name="twitter:card" content={metadata.twitter.card} />
         <meta name="twitter:title" content={metadata.twitter.title} />
         <meta name="twitter:description" content={metadata.twitter.description} />
-        <meta name="twitter:image" content={metadata.twitter.image} />
+        <meta property="twitter:image" content="https://socials.pixelemii.com/ogpixelcafe.png" />      
       </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
