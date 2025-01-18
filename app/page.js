@@ -39,7 +39,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold mb-4 glitch" data-text="PixelEmii">
               PixelEmii
             </h1>
-            <p className="text-sm text-white opacity-80 mb-6">Cyberpunk Bunny VTuber Links</p>
+            <p className="text-sm text-white opacity-80 mb-6">Cyberpunk Hacker Bunny VTuber</p>
           </div>
           <div className="text-white space-y-6">
             <SocialLink
