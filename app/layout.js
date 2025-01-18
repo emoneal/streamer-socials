@@ -22,7 +22,7 @@ export const metadata = {
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
-    image: "/ogpixelcafe.png",
+    image: "https://socials.pixelemii.com/ogpixelcafe.png",
     type: "website",
   }
 };
