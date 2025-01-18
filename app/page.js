@@ -1,101 +1,93 @@
-import Image from "next/image";
+import ParticlesBackground from './components/ParticlesBackground';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitch,
+  faYoutube,
+  faTiktok,
+  faXTwitter,
+  faDiscord,
+  faInstagram,
+  faBluesky
+} from "@fortawesome/free-brands-svg-icons";
+import { Fredoka } from 'next/font/google';
+
+const fredoka = Fredoka({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+});
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className={`min-h-screen flex items-center justify-center bg-cyberpunk ${fredoka.className}`}>
+      <ParticlesBackground />
+      <div className="w-full max-w-md p-6 bg-gradient-to-br from-purple-900 to-black rounded-xl shadow-lg border border-purple-500 backdrop-blur-md">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4 glitch" data-text="PixelEmii">
+            PixelEmii
+          </h1>
+          <p className="text-sm text-white opacity-80 mb-6">Cyberpunk Bunny VTuber Links</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="text-white space-y-6">
+          <SocialLink
+            icon={faTwitch}
+            label="Twitch"
+            url="https://www.twitch.tv/PixelEmii"
+            color="hover:text-purple-400"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <SocialLink
+            icon={faYoutube}
+            label="YouTube"
+            url="https://www.youtube.com/@pixelemii?sub_confirmation=1"
+            color="hover:text-red-400"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <SocialLink
+            icon={faDiscord}
+            label="Discord"
+            url="https://discord.gg/TbGuUFV2HT"
+            color="hover:text-blue-500"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <SocialLink
+            icon={faBluesky}
+            label="Bluesky"
+            url="https://bsky.app/profile/pixelemii.bsky.social"
+            color="hover:text-blue-200"
+          />
+          <SocialLink
+            icon={faXTwitter}
+            label="X (Twitter)"
+            url="https://x.com/intent/follow?screen_name=PixelEmii"
+            color="hover:text-blue-400"
+          />
+          <SocialLink
+            icon={faTiktok}
+            label="TikTok"
+            url="https://www.tiktok.com/@PixelEmii"
+            color="hover:text-green-400"
+          />
+          
+          <SocialLink
+            icon={faInstagram}
+            label="Instagram"
+            url="https://instagram.com/PixelEmii"
+            color="hover:text-pink-400"
+          />
+        </div>
+      </div>
     </div>
+  );
+}
+
+function SocialLink({ icon, label, url, color }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`flex items-center p-2 bg-black bg-opacity-30 rounded-md border border-purple-400 ${color} transition-transform transform hover:scale-105 hover:bg-opacity-50 shadow-md`}
+    >
+      {/* Control size explicitly */}
+      <FontAwesomeIcon icon={icon} className="text-white w-10 h-10" />
+      <span className="ml-3 text-sm font-medium">{label}</span>
+    </a>
   );
 }

@@ -1,21 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+body {
+  font-family: 'Fredoka', sans-serif;
+  text-shadow: 0 0 5px #6820bb, 0 0 10px #6820bb, 0 0 20px #6820bb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.bg-cyberpunk {
+  background: #1a0f2c; /* Very dark purple base */
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* Soft Gradient (Black to Dark Purple) */
+.bg-cyberpunk::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(45deg, rgba(26, 15, 44, 0.1), rgba(51, 0, 51, 0.4)); /* Black to Dark Purple */
+  background-size: 300% 300%;
+  animation: gradient-shift 10s ease-in-out infinite; /* Subtle, slow gradient animation */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Gradual Gradient Movement */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Light Neon Glow Effect (More Subtle) */
+@keyframes neon-glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2), 0 0 15px rgba(0, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(115, 85, 170, 0.4), 0 0 25px rgba(115, 85, 170, 0.3);
+  }
+}
+
+/* Subtle Noise Texture */
+.bg-cyberpunk::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.05) 0%, 
+    rgba(0, 0, 0, 0.02) 20%, 
+    rgba(0, 0, 0, 0.05) 40%, 
+    rgba(0, 0, 0, 0.02) 60%, 
+    rgba(0, 0, 0, 0.05) 80%, 
+    rgba(0, 0, 0, 0.02) 100%
+  );
+  opacity: 0.05; /* Very subtle noise effect */
+  z-index: 2;
+  pointer-events: none;
+  animation: noise-flicker 5s infinite; /* Gentle flicker for noise */
+  animation: glare 2s infinite alternate;
+}
+
+/* Flicker effect for noise */
+@keyframes noise-flicker {
+  0% {
+    opacity: 0.05;
+  }
+  25% {
+    opacity: 0.07;
+  }
+  50% {
+    opacity: 0.05;
+  }
+  75% {
+    opacity: 0.07;
+  }
+  100% {
+    opacity: 0.05;
+  }
+}
+
+@keyframes glare {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.2;
+  }
+  100% {
+    transform: rotate(15deg);
+    opacity: 0.4;
+  }
+}
+
+.glitch {
+  position: relative;
+  color: white;
+  font-size: clamp(2rem, 5vw, 5rem); /* Already in use */  display: inline-block;
+  z-index: 2;
+}
+
+@media (max-width: 768px) {
+  .text-5xl {
+    font-size: 3rem; /* Scale down on smaller screens */
+  }
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.glitch:hover::before,
+.glitch:hover::after {
+  animation: glitch-hover 1s infinite alternate;
+}
+
+@keyframes glitch-hover {
+  0% { transform: translate(0); }
+  50% { transform: translate(-5px, 5px); }
+  100% { transform: translate(5px, -5px); }
+}
+
+
+.glitch::before {
+  left: 3px; /* Slight adjustment for better positioning */
+  text-shadow: -1px 0 cyan;
+}
+
+.glitch::after {
+  left: -3px;
+  text-shadow: -1px 0 magenta;
+  animation: glitch 1s infinite alternate; /* Change animation timing for variety */
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(-5px, -5px);
+  }
+  75% {
+    transform: translate(5px, 5px);
+  }
+  100% {
+    transform: translate(5px, -5px);
+  }
+}
+
+/* Social Button Styling */
+
+a:hover span {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+
+a:hover {
+  transform: scale(1.05); /* Subtle zoom-in effect */
+  border: 2px solid rgba(140, 0, 255, 0.8); /* Neon border */
+  box-shadow: 0 4px 8px rgba(140, 0, 255, 0.6); /* Neon glow effect */
+  background: rgba(0, 255, 255, 0.1); /* Add glowing effect */
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the background slightly on hover */
+  transition: all 0.3s ease;
+}
+
+a:active {
+  transform: scale(1); /* Reset scale on active click */
 }
