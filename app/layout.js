@@ -20,10 +20,17 @@ export const metadata = {
   robots: "index, follow",
   openGraph: {
     title: "PixelEmii - Socials",
-    description: "PixelEmii is a cyberpunk-themed VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
+    description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
     image: "https://socials.pixelemii.com/ogpixelcafe.png",
+    site_name: "PixelEmii",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PixelEmii - Socials",
+    description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
+    image: "https://socials.pixelemii.com/ogpixelcafe.png",
   }
 };
 
