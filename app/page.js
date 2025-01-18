@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Script from 'next/script';
 import ParticlesBackground from './components/ParticlesBackground';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -20,6 +21,25 @@ const fredoka = Fredoka({
 export default function Home() {
   return (
     <div>
+      <Head>
+        {/* Title and Description */}
+        <title>PixelEmii - Socials</title>
+        <meta name="description" content="PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!" />
+        
+        {/* Open Graph Metadata */}
+        <meta property="og:title" content="PixelEmii - Socials" />
+        <meta property="og:description" content="PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!" />
+        <meta property="og:image" content="/ogpixelcafe.png" />
+        <meta property="og:url" content="https://socials.pixelemii.com" />
+        <meta property="og:site_name" content="PixelEmii" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card Metadata */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="PixelEmii - Socials" />
+        <meta name="twitter:description" content="PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!" />
+        <meta name="twitter:image" content="/ogpixelcafe.png" />
+      </Head>
       <Script
         src="https://www.googletagmanager.com/gtag/js?id=G-3KGBJQ48CZ"
         strategy="afterInteractive"
