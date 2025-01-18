@@ -18,6 +18,13 @@ export const metadata = {
   name: "viewport",
   content: "width=device-width, initial-scale=1",
   robots: "index, follow"
+  openGraph: {
+    title: "PixelEmii - Socials",
+    description: "PixelEmii is a cyberpunk-themed VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
+    url: "https://socials.pixelemii.com",
+    image: "/ogpixelcafe.png",
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
