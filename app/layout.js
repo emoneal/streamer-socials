@@ -27,7 +27,7 @@ export const metadata = {
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
     images: [ogimage],  // Use absolute URL for the image
-    site_name: "PixelEmii",
+    siteName: "PixelEmii",
     type: "website",
   },
   twitter: {
