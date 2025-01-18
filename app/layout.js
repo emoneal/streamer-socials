@@ -1,4 +1,4 @@
-import Head from "next/head"
+import Head from "next/head";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -12,6 +12,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+// Path to the local image (in the public folder)
+const ogimage = '/ogpixelcafe.png';  // Correct usage of relative URL
+
 export const metadata = {
   title: "PixelEmii - Socials",
   description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
@@ -23,7 +26,7 @@ export const metadata = {
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
-    image: "https://socials.pixelemii.com/ogpixelcafe.png",
+    image: ogimage,  // Use local image URL
     site_name: "PixelEmii",
     type: "website",
   },
@@ -31,7 +34,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
-    image: "https://socials.pixelemii.com/ogpixelcafe.png",
+    image: ogimage,  // Use local image URL
   }
 };
 
