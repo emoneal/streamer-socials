@@ -1,3 +1,5 @@
+import Head from 'next/head';
+import Script from 'next/script';
 import ParticlesBackground from './components/ParticlesBackground';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
