@@ -22,7 +22,7 @@ export const metadata = {
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
     url: "https://socials.pixelemii.com",
-    image: "https://socials.pixelemii.com/ogpixelcafe.png",
+    image: "https://www.pixelemii.com/ogpixelcafe.png",
     site_name: "PixelEmii",
     type: "website",
   },
@@ -30,7 +30,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "PixelEmii - Socials",
     description: "PixelEmii is a cyberpunk-themed hacker bunny VTuber with a mischievous, playful personality and a love for gaming. Join the chaos at the Byte & Brew Cafe!",
-    image: "https://socials.pixelemii.com/ogpixelcafe.png",
+    image: "https://www.pixelemii.com/ogpixelcafe.png",
   }
 };
 
