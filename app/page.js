@@ -8,7 +8,8 @@ import {
   faXTwitter,
   faDiscord,
   faInstagram,
-  faBluesky
+  faBluesky,
+  faSpotify
 } from "@fortawesome/free-brands-svg-icons";
 import { Fredoka } from 'next/font/google';
 
@@ -53,6 +54,12 @@ export default function Home() {
               label="YouTube"
               url="https://www.youtube.com/@pixelemii?sub_confirmation=1"
               color="hover:text-red-400"
+            />
+            <SocialLink
+              icon={faSpotify}
+              label="Spotify"
+              url="https://open.spotify.com/artist/4IVqzOLabkkT6ljyg1z5x6"
+              color="hover:text-pink-400"
             />
             <SocialLink
               icon={faDiscord}
